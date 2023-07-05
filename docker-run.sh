@@ -1,4 +1,4 @@
-echo "run dreambooth from docker"
+echo "run corp from docker"
 
 echo "NAME: $1"
 echo "MODEL_NAME: $2"
@@ -12,7 +12,7 @@ docker run --rm \
 -v /cfs/stable_diffusion/dreambooth/session:/app/session \
 -e NAME=$1 \
 -e MODEL_NAME=$2 \
--e URL=$3
+-e URL=$3 \
 -e INDEX=$4 \
 -e AUTO_SLICING=$5 \
-hulefei/corp:latest
+hulefei/crop:latest
