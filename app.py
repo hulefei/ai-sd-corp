@@ -17,7 +17,7 @@ class DreamboothCorpTool:
         self.path = f"session/{name}/dataset/{model_name}"
 
     def corp(self):
-        if os.path.exists(self.path):
+        if os.path.exists(self.path) and self.start_index == 0:
             shutil.rmtree(self.path)
 
         os.makedirs(self.path, exist_ok=True)
